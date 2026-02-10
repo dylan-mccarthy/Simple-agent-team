@@ -1,0 +1,54 @@
+{
+  "name": "simple-agent-team",
+  "version": "1.0.0",
+  "description": "A collaborative multi-agent system with LLM-backed agents, collaboration messaging, and real-time dashboard",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "demo": "ts-node src/demo.ts",
+    "test-system": "ts-node src/test-system.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylan-mccarthy/Simple-agent-team.git"
+  },
+  "keywords": [
+    "agent",
+    "multi-agent",
+    "llm",
+    "openai",
+    "collaboration",
+    "typescript",
+    "dashboard",
+    "ai",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dylan-mccarthy/Simple-agent-team/issues"
+  },
+  "homepage": "https://github.com/dylan-mccarthy/Simple-agent-team#readme",
+  "dependencies": {
+    "@types/node": "^25.2.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "openai": "^6.19.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "uuid": "^13.0.0",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.18.1",
+    "nodemon": "^3.1.11"
+  }
+}
