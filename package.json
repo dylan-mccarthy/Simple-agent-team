@@ -1,19 +1,31 @@
 {
   "name": "simple-agent-team",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collaborative multi-agent system with LLM-backed agents, collaboration messaging, and real-time dashboard",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "dev": "nodemon --exec ts-node src/index.ts",
     "start": "node dist/index.js",
+    "demo": "ts-node src/demo.ts",
+    "test-system": "ts-node src/test-system.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dylan-mccarthy/Simple-agent-team.git"
   },
-  "keywords": [],
+  "keywords": [
+    "agent",
+    "multi-agent",
+    "llm",
+    "openai",
+    "collaboration",
+    "typescript",
+    "dashboard",
+    "ai",
+    "automation"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
