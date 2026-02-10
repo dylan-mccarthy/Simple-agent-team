@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { AgentConfig, AgentRole, AgentStatus, Message, MessageType, Task } from '../types';
+import { AgentConfig, AgentRole, AgentState, AgentStatus, Message, MessageType, Task } from '../types';
 import { CollaborationSystem } from '../collaboration/CollaborationSystem';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -61,7 +61,7 @@ export abstract class Agent {
     }
   }
 
-  public getState() {
+  public getState(): AgentState {
     return {
       id: this.config.id,
       name: this.config.name,

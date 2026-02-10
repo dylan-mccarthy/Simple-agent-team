@@ -10,8 +10,15 @@ dotenv.config();
 async function demo() {
   console.log('🚀 Starting Agent Team Collaboration Demo...\n');
 
-  const apiKey = process.env.OPENAI_API_KEY || 'demo_key';
-  const agentRunner = new AgentRunner(apiKey);
+  const apiKey = process.env.OPENAI_API_KEY;
+  
+  if (!apiKey) {
+    console.warn('⚠️  Warning: OPENAI_API_KEY not set. Using placeholder key for demo.');
+    console.warn('⚠️  LLM responses will fail, but collaboration system will still work.');
+    console.warn('⚠️  Set OPENAI_API_KEY in .env for full LLM functionality.\n');
+  }
+  
+  const agentRunner = new AgentRunner(apiKey || 'demo_key');
 
   const manager = agentRunner.createAgent({
     id: 'manager-1',

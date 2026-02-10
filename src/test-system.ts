@@ -9,8 +9,14 @@ async function testSystem() {
   console.log('🧪 Testing Agent Team System Structure...\n');
 
   try {
-    const apiKey = process.env.OPENAI_API_KEY || 'test_key';
-    const agentRunner = new AgentRunner(apiKey);
+    const apiKey = process.env.OPENAI_API_KEY;
+    
+    if (!apiKey) {
+      console.warn('⚠️  Warning: OPENAI_API_KEY not set. Using placeholder key for testing.');
+      console.warn('⚠️  LLM features will not work. Set OPENAI_API_KEY in .env for full functionality.\n');
+    }
+    
+    const agentRunner = new AgentRunner(apiKey || 'test_key');
 
     console.log('✅ AgentRunner initialized');
 
