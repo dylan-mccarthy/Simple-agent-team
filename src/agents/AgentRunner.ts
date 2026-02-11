@@ -13,7 +13,11 @@ export class AgentRunner {
 
   constructor(apiKey: string) {
     this.collaboration = new CollaborationSystem();
-    this.openai = new OpenAI({ apiKey });
+    // Configure OpenAI client to use GitHub Models endpoint
+    this.openai = new OpenAI({ 
+      apiKey,
+      baseURL: 'https://models.github.ai/inference'
+    });
   }
 
   public createAgent(config: AgentConfig): Agent {

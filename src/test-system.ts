@@ -9,11 +9,11 @@ async function testSystem() {
   console.log('🧪 Testing Agent Team System Structure...\n');
 
   try {
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = process.env.GITHUB_TOKEN;
     
     if (!apiKey) {
-      console.warn('⚠️  Warning: OPENAI_API_KEY not set. Using placeholder key for testing.');
-      console.warn('⚠️  LLM features will not work. Set OPENAI_API_KEY in .env for full functionality.\n');
+      console.warn('⚠️  Warning: GITHUB_TOKEN not set. Using placeholder key for testing.');
+      console.warn('⚠️  LLM features will not work. Set GITHUB_TOKEN in .env for full functionality.\n');
     }
     
     const agentRunner = new AgentRunner(apiKey || 'test_key');

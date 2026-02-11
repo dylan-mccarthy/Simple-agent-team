@@ -45,7 +45,7 @@ export abstract class Agent {
   protected async getLLMResponse(prompt: string): Promise<string> {
     try {
       const completion = await this.openai.chat.completions.create({
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-4o-mini', // Using GitHub Models naming convention
         messages: [
           { role: 'system', content: this.config.systemPrompt },
           { role: 'user', content: prompt }
