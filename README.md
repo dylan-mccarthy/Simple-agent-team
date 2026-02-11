@@ -50,9 +50,10 @@ DASHBOARD_PORT=3000
 
 To get a GitHub token:
 1. Go to https://github.com/settings/tokens
-2. Click "Generate new token" (classic)
-3. Give it a name and select the `models` scope
-4. Copy the token and add it to your `.env` file
+2. Choose either:
+   - **Fine-grained token**: Click "Generate new token (fine-grained)" and enable the "models:read" permission
+   - **Classic token**: Click "Generate new token (classic)" - no specific scope required
+3. Copy the token and add it to your `.env` file
 
 ## Usage
 

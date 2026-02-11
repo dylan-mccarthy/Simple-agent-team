@@ -13,7 +13,8 @@ async function main() {
     console.error('Error: GITHUB_TOKEN environment variable is required');
     console.log('Please create a .env file with your GitHub personal access token:');
     console.log('GITHUB_TOKEN=your_github_token_here');
-    console.log('Get your token at: https://github.com/settings/tokens (requires "models" scope)');
+    console.log('Get your token at: https://github.com/settings/tokens');
+    console.log('For fine-grained tokens: use "models:read" scope');
     process.exit(1);
   }
 
