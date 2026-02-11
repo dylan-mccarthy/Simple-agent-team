@@ -19,7 +19,7 @@
     "agent",
     "multi-agent",
     "llm",
-    "openai",
+    "github-models",
     "collaboration",
     "typescript",
     "dashboard",

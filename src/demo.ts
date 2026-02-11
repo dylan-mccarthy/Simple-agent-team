@@ -10,12 +10,12 @@ dotenv.config();
 async function demo() {
   console.log('🚀 Starting Agent Team Collaboration Demo...\n');
 
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = process.env.GITHUB_TOKEN;
   
   if (!apiKey) {
-    console.warn('⚠️  Warning: OPENAI_API_KEY not set. Using placeholder key for demo.');
+    console.warn('⚠️  Warning: GITHUB_TOKEN not set. Using placeholder key for demo.');
     console.warn('⚠️  LLM responses will fail, but collaboration system will still work.');
-    console.warn('⚠️  Set OPENAI_API_KEY in .env for full LLM functionality.\n');
+    console.warn('⚠️  Set GITHUB_TOKEN in .env for full LLM functionality.\n');
   }
   
   const agentRunner = new AgentRunner(apiKey || 'demo_key');

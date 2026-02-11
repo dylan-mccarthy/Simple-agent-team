@@ -7,12 +7,13 @@ import { ManagerAgent } from './agents/ManagerAgent';
 dotenv.config();
 
 async function main() {
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = process.env.GITHUB_TOKEN;
   
   if (!apiKey) {
-    console.error('Error: OPENAI_API_KEY environment variable is required');
-    console.log('Please create a .env file with your OpenAI API key:');
-    console.log('OPENAI_API_KEY=your_api_key_here');
+    console.error('Error: GITHUB_TOKEN environment variable is required');
+    console.log('Please create a .env file with your GitHub personal access token:');
+    console.log('GITHUB_TOKEN=your_github_token_here');
+    console.log('Get your token at: https://github.com/settings/tokens (requires "models" scope)');
     process.exit(1);
   }
 

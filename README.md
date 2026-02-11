@@ -13,7 +13,7 @@ A collaborative multi-agent system built with Node.js and TypeScript, featuring 
 ### Components
 
 1. **Agent Runner** (`src/agents/`)
-   - Base Agent class with LLM integration (OpenAI)
+   - Base Agent class with LLM integration (GitHub Models)
    - ManagerAgent: Breaks down tasks and delegates to workers
    - PlannerAgent: Creates detailed plans and strategies
    - WorkerAgent: Executes tasks and can ask questions to managers
@@ -41,12 +41,18 @@ cp .env.example .env
 
 ## Configuration
 
-Create a `.env` file with your OpenAI API key:
+Create a `.env` file with your GitHub personal access token:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+GITHUB_TOKEN=your_github_personal_access_token_here
 DASHBOARD_PORT=3000
 ```
+
+To get a GitHub token:
+1. Go to https://github.com/settings/tokens
+2. Click "Generate new token" (classic)
+3. Give it a name and select the `models` scope
+4. Copy the token and add it to your `.env` file
 
 ## Usage
 
@@ -127,7 +133,7 @@ The dashboard WebSocket provides real-time updates:
 
 - **Runtime**: Node.js
 - **Language**: TypeScript
-- **LLM**: OpenAI GPT-3.5-turbo
+- **LLM**: GitHub Models (gpt-4o-mini)
 - **Web Framework**: Express.js
 - **WebSocket**: ws library
 - **Frontend**: Vanilla HTML/CSS/JavaScript
